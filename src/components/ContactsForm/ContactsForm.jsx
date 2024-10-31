@@ -16,6 +16,7 @@ const ContactForm = () => {
   const [number, setNumber] = useState('');
 
   const contacts = useSelector(getVisibleContacts);
+  
   const dispatch = useDispatch();
 
   const handleSubmit = evt => {
@@ -130,7 +131,3 @@ export default ContactForm;
 
 // export default ContactForm;
 
-// // import { useState } from 'react';
-// // import { nanoid } from 'nanoid';
-
-// // import { useFormik } from 'formik';
