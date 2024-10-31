@@ -1,7 +1,14 @@
 import React from "react";
-import {ContactsItem, Button} from './ContactsList.styled';
+import { ContactsItem, Button } from './ContactsList.styled';
 
-const ContactList = ({ contacts,onRemoveContact }) => {
+import { useSelector, useDispatch } from "react-redux";
+import { getVisibleContacts } from "redux/selectors";
+import { removeContact } from "redux/contactsSlice";
+
+const ContactList = () => {
+    const contacts = useSelector(getVisibleContacts);
+    const dispatch = useDispatch();
+    const handleDelete = () => dispatch(removeContact());
     return (
         <div>
             <ul>
@@ -11,7 +18,7 @@ const ContactList = ({ contacts,onRemoveContact }) => {
                         {<Button
                             type='button'
                             name='delete'
-                            onClick={()=>onRemoveContact(contact.id)}
+                            onClick={handleDelete}
                             >delete</Button>}
                     </ContactsItem>
                 ))}

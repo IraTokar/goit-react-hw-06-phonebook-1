@@ -1,23 +1,23 @@
 import styled from 'styled-components';
-import { Field, Form, ErrorMessage } from 'formik';  
+// import { Field, Form, ErrorMessage } from 'formik';  
 
-export const FormContact = styled(Form)`
+export const Form = styled.form`
   display: flex;
   flex-direction: column;
   gap: 8px;
 `;
 
-export const FormField = styled(Field)`
+export const Input = styled.input`
   padding: 4px;
   font: inherit;
   background-color: transparent ;
   border: 1px solid black;
 `;
 
-export const MessageError = styled(ErrorMessage)`
-  color: red;
-  font-size: 10px;
-`;
+// export const MessageError = styled.p`
+//   color: red;
+//   font-size: 10px;
+// `;
 
 export const Button = styled.button`
   background-color: transparent;
@@ -31,4 +31,5 @@ export const Button = styled.button`
   font-size: 16px;
 
 `;
+
 
